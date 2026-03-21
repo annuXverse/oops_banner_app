@@ -5,8 +5,7 @@ public class UC8 {
     private static final Map<Character, String[]> patternMap = new HashMap<>();
 
     static {
-        // Har pattern ko 6 characters ki fixed width di hai
-        patternMap.put('O', new String[]{
+          patternMap.put('O', new String[]{
             "  ***  ",
             " *   * ",
             " *   * ",
@@ -41,7 +40,6 @@ public class UC8 {
             StringBuilder line = new StringBuilder();
             for (char c : word.toCharArray()) {
                 if (patternMap.containsKey(c)) {
-                    // Ek extra space letters ke beech mein gap ke liye
                     line.append(patternMap.get(c)[i]).append(" ");
                 }
             }
